@@ -1,0 +1,19 @@
+{
+  "name": "repro",
+  "packageManager": "yarn@4.1.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "yarn clean && tsc -b",
+    "build:dev": "tsc -b --watch",
+    "clean": "rm -rf ./dest tsconfig.tsbuildinfo",
+    "start": "yarn build && node ./dest/index.js"
+  },
+  "dependencies": {
+    "@aztec/accounts": "0.86.0",
+    "@aztec/aztec.js": "0.86.0",
+    "@aztec/noir-contracts.js": "0.86.0",
+    "@types/node": "^22.15.17",
+    "typescript": "^5.8.3"
+  }
+}
